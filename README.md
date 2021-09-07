@@ -8,23 +8,22 @@ Download and drag the **MY_Model.php** file into your **application/core** direc
 ```php
 class Avenger_model extends MY_Model
 {
-    protected $table_name = 'avengers';
-    
-    protected $primary_key = 'avenger_id';
+	protected $table_name = 'avengers';
 
-    // array of fields available for modification
-    protected $fields = [
-      'name',
-      'age',
-      'flies'
-    ]; 
-    
-    // array of models
-    public $hasMany = ['power']; 
+	protected $primary_key = 'avenger_id';
 
-    // array of models
-    public $belongsTo = ['organization']; 
-  
+	// array of fields available for modification
+	protected $fields = [
+	'name',
+	'age',
+	'flies'
+	]; 
+
+	// array of models
+	public $hasMany = ['power']; 
+
+	// array of models
+	public $belongsTo = ['organization']; 
 
 	public function __construct()
 	{
