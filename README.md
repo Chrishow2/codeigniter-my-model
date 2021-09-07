@@ -1,5 +1,5 @@
 # CodeIgniter-MY_Model
-
+<img alt="CodeIgniter" src="https://img.shields.io/badge/-CodeIgniter-555555?style=for-the-badge&logo=codeigniter" />
 This **CodeIgniter MY_Model** is a very basic yet helpful ORM to help you deal with basic operations in codeigniter
 
 ## Installation
