@@ -9,13 +9,9 @@ class MY_Model extends CI_Model {
 
     protected $fields = [];
  
-    public $related;
-
     public $hasMany = [];
 
     public $belongsTo = [];
-
-    public $adminModels = [];
 
     public function __construct()
     {
@@ -259,10 +255,6 @@ class MY_Model extends CI_Model {
         }
 
         if (in_array($relatedModel, $this->belongsTo)) {
-
-            if(in_array($relatedModel, $this->adminModels)) {
-                $this->database = 'db_admin';
-            }
 
             return $this->getbelongsTo($relatedModel);
         }
