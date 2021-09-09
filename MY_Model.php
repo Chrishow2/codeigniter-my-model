@@ -1,7 +1,7 @@
 <?php
 class MY_Model extends CI_Model {
 
-    protected $database = 'db_user';
+    protected $database = 'db';
 
     protected $table_name;
     
@@ -16,6 +16,9 @@ class MY_Model extends CI_Model {
     public function __construct()
     {
         parent::__construct();
+        
+        //connect to default database
+        $this->db = $this->load->database('default', TRUE);
     }
 
     public function setFields($row_array) {
@@ -88,7 +91,7 @@ class MY_Model extends CI_Model {
         $rows = $this->$database->get()->result_array();
 
         if ($rows == null) {
-            return null;
+            return [];
         }
 
         if ($serialize == false) {
